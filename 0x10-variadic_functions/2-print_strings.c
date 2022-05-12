@@ -1,39 +1,37 @@
+#include <stdarg.h>
 #include <stdio.h>
-  * @n: ...
-  *
-  * Return: ...
-  */
+#include "variadic_functions.h"
+/**
+ * print_strings - Entry Point
+ * @separator: comma space
+
+		{
+			printf("%s", separator);
+		}
+	}
+	printf("\ * @n: number of elements
+ * Return: void
+ */
 void print_strings(const char *separator, const unsigned int n, ...)
 {
-	va_list args;
-	unsigned int i = 0;
-	char #include "variadic_functions.h"
+	va_list valist;
+	unsigned int i;
+	char *str;
 
-/**
-  * print_strings - ...
-  * @separator: ...
-*string;
+	if (separator == NULL)
+		return;
 
-	if (n > 0)
+	va_start(valist, n);
+
+	for (i = 0; i < n; i++)
 	{
-		va_start(args, n);
-
-		while (i < n)
+		str = va_arg(valist, char *);
+		if (str == NULL)
 		{
-			string = va_arg(args, char *);
-			if (string == NULL)
-				printf("%s", "(nil)");
-			else
-				printf("%s", string);
-
-			if (i != n - 1 && separator != NULL)
-				printf("%s", separator);
-
-			i++;
+			str = "(nil)";
 		}
+		printf("%s", str);
+		if (i != (n - 1))n");
 
-		va_end(args);
-	}
-
-	printf("\n");
+	va_end(valist);
 }
