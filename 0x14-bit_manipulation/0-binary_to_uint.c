@@ -1,6 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
-#include "holberton.h"main[C[C[[C[C[C[C[C[C[C[C[C[C[C.h"
+#include "main.h"
 
 /**
   * binary_to_uint - Converts a binary number to an unsigned int
